@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "4c296899-333c-4bf0-ab9e-8ae062eafc88",
+		"name": "FILE-MANAGER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13654890"
+	},
+	"item": [
+		{
+			"name": "manage-file",
+			"item": [
+				{
+					"name": "get-file",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/list-file",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"list-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileUpload",
+									"type": "file",
+									"src": "/C:/Users/miroj/Downloads/DSCF8713.jpg"
+								},
+								{
+									"key": "description",
+									"value": "test file",
+									"type": "text"
+								},
+								{
+									"key": "folder_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "created_at",
+									"value": "2022-04-14 08:34:21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/upload-file",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"upload-file"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manage-directory",
+			"item": [
+				{
+					"name": "delete-directory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/delete-directory/directory-name=upload-folder",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"delete-directory",
+								"directory-name=upload-folder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-directory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "folder_name",
+									"value": "upload-folder",
+									"type": "text"
+								},
+								{
+									"key": "created_at",
+									"value": "2022-04-14 08:34:21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/create-directory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"create-directory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-directory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/list-directory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"list-directory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-single-directory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/file-manager/list-directory/directory-id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"file-manager",
+								"list-directory",
+								"directory-id=1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

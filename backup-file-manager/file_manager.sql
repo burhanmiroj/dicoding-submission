@@ -32,15 +32,9 @@ CREATE TABLE IF NOT EXISTS `tb_files` (
   KEY `index` (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table file_manager.tb_files: ~5 rows (approximately)
+-- Dumping data for table file_manager.tb_files: ~0 rows (approximately)
 DELETE FROM `tb_files`;
 /*!40000 ALTER TABLE `tb_files` DISABLE KEYS */;
-INSERT INTO `tb_files` (`id`, `file`, `description`, `size`, `folder_name`, `created_at`, `updated_at`) VALUES
-	(61, '1655868666412-DSCF8713.jpg', 'test file', '2.58 MB', 'upload-folder', '2022-06-22 10:31:06', NULL),
-	(62, '1655868687912-DSCF8713.jpg', 'test file', '2.58 MB', '', '2022-06-22 10:31:27', NULL),
-	(63, '1655869175876-DSCF8713.jpg', 'test file', '2.58 MB', '', '2022-06-22 10:39:36', NULL),
-	(64, '1655870398386-DSCF8713.jpg', 'test file', '2.58 MB', '', '2022-06-22 10:59:58', NULL),
-	(65, '1655871575046-DSCF8713.jpg', 'test file', '2.58 MB', 'upload-folder-two', '2022-06-22 11:19:35', NULL);
 /*!40000 ALTER TABLE `tb_files` ENABLE KEYS */;
 
 -- Dumping structure for table file_manager.tb_folders
@@ -54,11 +48,9 @@ CREATE TABLE IF NOT EXISTS `tb_folders` (
   KEY `index` (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table file_manager.tb_folders: ~1 rows (approximately)
+-- Dumping data for table file_manager.tb_folders: ~0 rows (approximately)
 DELETE FROM `tb_folders`;
 /*!40000 ALTER TABLE `tb_folders` DISABLE KEYS */;
-INSERT INTO `tb_folders` (`id`, `folder_name`, `created_at`, `updated_at`) VALUES
-	(39, 'upload-folder-two', '2022-06-22 11:06:51', NULL);
 /*!40000 ALTER TABLE `tb_folders` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
